@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Burger House - FoodDash</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <div class="logo-placeholder">BrandLogo</div>
+            <span class="nav-tag">Primary color: #7c3aed</span>
+            <span class="nav-tag">Font: plusjakartasans</span>
+            <span class="nav-tag">Mode: light</span>
+            <span class="nav-tag">Roundness</span>
+        </div>
+        <div class="nav-right">
+            <button class="btn-icon"><i class="fa-solid fa-play"></i></button>
+            <button class="btn-outline"><i class="fa-solid fa-arrow-up-from-bracket"></i> Export</button>
+            <button class="btn-dark"><i class="fa-solid fa-share-nodes"></i> Share</button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="hero-bg"></div> <!-- Background Image -->
+            <button class="back-btn"><i class="fa-solid fa-chevron-left"></i> Section Dining</button>
+        </header>
+
+        <!-- Restaurant Info Card -->
+        <section class="restaurant-card">
+            <div class="res-header">
+                <div class="res-title">
+                    <h1>The Burger House</h1>
+                    <i class="fa-solid fa-circle-check verified"></i>
+                </div>
+                <div class="res-actions">
+                    <button class="btn-outline sm"><i class="fa-regular fa-bookmark"></i> Save</button>
+                    <button class="btn-outline sm"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                </div>
+            </div>
+            <div class="res-meta">
+                <span class="rating"><i class="fa-solid fa-star"></i> 4.8 (1,240+ reviews)</span>
+                <span class="dot">•</span>
+                <span>25-35 min</span>
+                <span class="dot">•</span>
+                <span>R15 Delivery</span>
+                <span class="dot">•</span>
+                <span class="status">Open until 22:00 (2.4 km away)</span>
+            </div>
+        </section>
+
+        <!-- Promotion Banner -->
+        <div class="promo-banner">
+            <div class="promo-text">
+                <i class="fa-solid fa-gift"></i> AUTO-APPLIED: Free Fries on orders over R150
+            </div>
+            <div class="promo-tag">APPLIED IN CART</div>
+        </div>
+
+        <!-- Category Pills -->
+        <div class="category-scroll">
+            <button class="pill active">Most Loved Picks <i class="fa-solid fa-fire"></i></button>
+            <button class="pill">Gourmet Burgers</button>
+            <button class="pill">Loaded Fries & Sides</button>
+            <button class="pill">Craft Shakes</button>
+            <button class="pill">Beverages</button>
+        </div>
+
+        <!-- Content Layout (Grid) -->
+        <div class="content-grid">
+            
+            <!-- Left Column: Menu -->
+            <div class="menu-section">
+                <div class="section-header">
+                    <h2>Most Loved Picks</h2>
+                    <span class="item-count">4 DISHES</span>
+                </div>
+                <p class="section-desc">The signature dishes most ordered and loved by Sandwich burger connoisseurs.</p>
+
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-card">
+                        <div class="card-img">
+                            <img src="images/burger-combo.png" alt="burger-combo">
+                        </div>
+                        <div class="card-body">
+                            <h3>Gourmet burger-combo</h3>
+                            <p>Beef burger , fries and onions rings with extra sauce and sprite on the side  </p>
+                            <div class="card-footer">
+                                <span class="price">R115.00</span>
+                                <button class="btn-add"><i class="fa-solid fa-plus"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-card">
+                        <div class="card-img">
+                            <span class="badge">POPULAR</span>
+                            <img src="images/dutchman-burger.jpg">
+                        </div>
+                        <div class="card-body">
+                            <h3>Dutchman burger </h3>
+                            <p>dutchman burger served with a side of crsipy fries , any refresher of your choice</p>
+                            <div class="card-footer">
+                                <span class="price">R89.00</span>
+                                <button class="btn-add"><i class="fa-solid fa-plus"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-card">
+                        <div class="card-img">
+                            <img src="images/burger-shake.jpg" alt="burger-shake">
+                        </div>
+                        <div class="card-body">
+                            <h3>Zetsy burger combo</h3>
+                            <p>Smokey beef & bacon burger served with fries on the side, includes a large strawberry milkshake</p>
+                            <div class="card-footer">
+                                <span class="price">R128.00</span>
+                                <button class="btn-add"><i class="fa-solid fa-plus"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-card">
+                        <div class="card-img">
+                            <span class="badge">NEW</span>
+                            <img src="images/cheese-burger.png" alt="cheese-burger">
+                        <div class="card-body">
+                            <h3>Cheese masterpiece</h3>
+                            <p>Medium cheese burger with any side of your choice</p>
+                            <div class="card-footer">
+                                <span class="price">R95.00</span>
+                                <button class="btn-add"><i class="fa-solid fa-plus"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Banner -->
+                <div class="recommendation-banner">
+                    <div>
+                        <h4>PAIR YOUR MEAL</h4>
+                        <h3>Explore Loaded Truffle Fries & Craft Shakes</h3>
+                        <p>Triple-cooked hand-cut chips, salted caramel biscoff milkshakes, and homemade dips.</p>
+                    </div>
+                    <button class="btn-outline sm">View All Sides (8)</button>
+                </div>
+
+                <!-- Dietary Info -->
+                <div class="dietary-info">
+                    <h4>Dietary & Kitchen Notes</h4>
+                    <div class="dietary-tags">
+                        <span><i class="fa-solid fa-leaf"></i> 100% Halal-certified prep & storage facility</span>
+                        <span><i class="fa-solid fa-wheat-awn"></i> 100% grass-fed South African free-range beef</span>
+                        <span><i class="fa-solid fa-triangle-exclamation"></i> Gluten-free bun substitutions available upon request</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Cart -->
+            <aside class="cart-sidebar">
+                <div class="cart-header">
+                    <h3>Your Order <span class="cart-count">2</span></h3>
+                    <button class="clear-btn">Clear All</button>
+                </div>
+
+                <div class="cart-items">
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <span class="qty">1x</span>
+                            <div>
+                                <h4>The Burgerhouse</h4>
+                                <p>Dutchman Burger with fries</p>
+                                <p class="modifier">No tamatoes</p>
+                            </div>
+                        </div>
+                        <span class="cart-price">R89.00</span>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <span class="qty">1x</span>
+                            <div>
+                                <h4>Gourmert burger-combo</h4>
+                                <p>R115.00</p>
+                            </div>
+                        </div>
+                        <span class="cart-price">R115.00</span>
+                    </div>
+
+                    <!-- Free item tag -->
+                    <div class="free-item-tag">
+                        <i class="fa-solid fa-tag"></i> Extra free fries with a small coke included(R50.00 value)
+                    </div>
+                </div>
+
+                <div class="cart-totals">
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span>R204.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Standard Delivery <i class="fa-regular fa-circle-question"></i></span>
+                        <span>R15.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Service Fee</span>
+                        <span>R5.00</span>
+                    </div>
+                    <div class="total-row discount">
+                        <span>Special Offer Discount</span>
+                        <span>-R8.00</span>
+                    </div>
+                </div>
+
+                <div class="cart-final-total">
+                    <span>Total</span>
+                    <span>R216.00</span>
+                </div>
+
+                <div class="delivery-estimate">
+                    <i class="fa-regular fa-clock"></i> 14 Minute Late, Sandwich, Saturday 25-35 min
+                </div>
+
+                <button class="btn-checkout">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></button>
+                
+                <div class="cart-footer-links">
+                    <span><i class="fa-solid fa-utensils"></i> No Cutlery</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Live Order Tracking</span>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-col">
+                <h4>FoodDash</h4>
+                <p>The fastest, freshest gourmet food delivery experience in South Africa.</p>
+                <p class="copyright">© 2025 FoodDash Technologies Inc. All rights reserved.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Discover</h4>
+                <ul>
+                    <li><a href="#">Top Rated</a></li>
+                    <li><a href="#">Fastest Delivery</a></li>
+                    <li><a href="#">New Restaurants</a></li>
+                    <li><a href="#">Groceries & Pantry</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Saved Addresses</a></li>
+                    <li><a href="#">Shopping Bag</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Help</h4>
+                <ul>
+                    <li><a href="#">Support Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>

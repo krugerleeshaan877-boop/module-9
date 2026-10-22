@@ -1,0 +1,1474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6fc;
+    color: #171721;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 12px 5%;
+    background: white;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.purple,
+.brand .purple {
+    color: #7C3AED;
+}
+
+.location {
+    background: #f3f0ff;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-links a {
+    font-size: 12px;
+    color: #555;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #7C3AED;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-button {
+    background: #171b29;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.profile {
+    font-size: 12px;
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 30px auto;
+}
+
+
+/* WELCOME */
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.greeting {
+    color: #16a34a;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.welcome h1 {
+    font-size: 28px;
+    margin: 8px 0;
+}
+
+.welcome p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* HERO BANNER */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    background: linear-gradient(120deg, #20283d, #34304f);
+
+    color: white;
+    padding: 25px;
+    border-radius: 18px;
+
+    min-height: 230px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 9px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+
+
+
+.hero p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #dedee8;
+    max-width: 420px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.hero-buttons span {
+    font-size: 9px;
+    background: rgba(255,255,255,0.15);
+    padding: 7px 10px;
+    border-radius: 15px;
+}
+
+.hero-button {
+    background: #7C3AED;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 11px 20px;
+    font-size: 11px;
+}
+
+.hero-button:hover {
+    background: #5b21b6;
+}
+
+.hero-image {
+    width: 43%;
+    height: 180px;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.explore-categories{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+.explore-categories h1{
+    font-size: 20px;
+}
+
+.nav-btns span{
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 6px;
+    background: lightgrey;
+}
+
+.explore-section {
+    padding-top: 10px;
+}
+
+/* Heading */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.navigation {
+    display: flex;
+    gap: 8px;
+}
+
+.navigation button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    background: #f0f2fa;
+    color: #344054;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+/* Category Cards */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.category {
+    height: 87px;
+    background: #ffffff;
+    border: 1px solid #f0f0f5;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.category:hover {
+    transform: translateY(-3px);
+    border-color: #b99aff;
+}
+
+.category.active {
+    background: #eadcff;
+    border-color: #eadcff;
+}
+
+.category-icon {
+    width: 43px;
+    height: 43px;
+    background: #f8f9ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.category p {
+    font-size: 11px;
+    color: #101828;
+    font-weight: 500;
+}
+
+.category.active p {
+    color: #5421b8;
+}
+
+/* Filter Section */
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #e9eaf2;
+    background: #f1f3fa;
+    color: #344054;
+    border-radius: 20px;
+    padding: 7px 13px;
+    font-size: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #e5e7f2;
+}
+
+.filter-btn i {
+    font-size: 10px;
+}
+
+/* All Filters */
+
+.all-filters {
+    background: #111827;
+    color: white;
+    border-color: #111827;
+    font-weight: 600;
+}
+
+/* Rating */
+
+.rating {
+    background: #eadcff;
+    border-color: #eadcff;
+    color: #6929c4;
+}
+
+.rating span {
+    font-size: 14px;
+}
+
+/* Nearby Text */
+
+.nearby {
+    font-size: 10px;
+    color: #667085;
+    white-space: nowrap;
+}
+
+.popular-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+    padding-top: 30px;
+}
+
+.header-navigation{
+    color: #7C3AED;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.header-navigation button{
+    background: none;
+    border: none;
+    color: #7C3AED;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.popular-header p{
+    font-size: 12px;
+    color: #667085;
+}
+
+.restaurants-cards{
+    display: flex;
+    gap: 15px;
+}
+
+.card{
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+    width: 100%;
+    max-width: 220px;
+    min-height: 250px;
+    padding: 14px;
+}
+
+.card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.card-info{
+    display: flex;
+    align-items: center;
+}
+
+.card-rating{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #E9EAF2;
+    color: #344054;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-right: 6px;
+    width: 100%;
+}
+
+.delivery-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery-time{
+    font-size: 12px;
+    color: #171b29;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 10px;
+}
+
+.delivery-location{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #E9EAF2;
+    color: #344054;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-right: 6px;
+    width: 50%;
+}
+
+.restaurant-card img{
+    border-radius: 50%; 
+
+}
+
+
+/* FOOD HIGHLIGHTS SECTION */
+
+.food-highlights {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 22px;
+    width: 100%;
+    padding: 12px 7.3%;
+    background: #f8f9ff;
+    color: #101828;
+}
+
+
+/* SECTION HEADINGS */
+
+.section-title,
+.trending-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.section-title h2,
+.trending-heading h2 {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.section-title h2 i,
+.trending-heading h2 i {
+    color: #792ff0;
+    font-size: 17px;
+}
+
+.save-label {
+    font-size: 10px;
+    color: #7029e8;
+    font-weight: 600;
+}
+
+.trending-heading span {
+    font-size: 11px;
+    color: #344054;
+}
+
+
+/* COMBO CARDS */
+
+.combo-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.combo-card {
+    background: #ffffff;
+    border: 1px solid #edf0f5;
+    border-radius: 16px;
+    padding: 14px;
+    box-shadow: 0 2px 5px rgba(16, 24, 40, 0.02);
+    transition: 0.3s ease;
+}
+
+.combo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+}
+
+.combo-details {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    min-height: 85px;
+}
+
+.combo-image {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.combo-info {
+    min-width: 0;
+}
+
+.restaurant-name {
+    display: block;
+    color: #752de9;
+    font-size: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.restaurant-name.green {
+    color: #159447;
+}
+
+.combo-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.combo-info p {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #667085;
+}
+
+
+/* COMBO PRICE AND BUTTON */
+
+.combo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.price strong {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.price del {
+    font-size: 10px;
+    color: #98a2b3;
+}
+
+.add-btn {
+    background: #7935e9;
+    color: white;
+    border: none;
+    border-radius: 22px;
+    padding: 8px 19px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-btn:hover {
+    background: #5e20c8;
+    transform: scale(1.04);
+}
+
+
+/* FOODDASH CLUB BANNER */
+
+.club-banner {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #f0f1ff;
+    border-radius: 15px;
+    padding: 14px;
+    margin-top: 13px;
+    min-height: 70px;
+}
+
+.club-icon {
+    width: 42px;
+    height: 42px;
+    background: #e5d6ff;
+    color: #792ff0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.club-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.club-text h4 {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.club-text p {
+    font-size: 11px;
+    color: #667085;
+}
+
+.manage-btn {
+    background: #ffffff;
+    border: 1px solid #edf0f5;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.manage-btn:hover {
+    background: #e9ddff;
+}
+
+
+/* TRENDING CARD */
+
+.trending-card {
+    background: #ffffff;
+    border: 1px solid #edf0f5;
+    border-radius: 16px;
+    padding: 12px 17px;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.trending-item:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+.rank {
+    width: 18px;
+    text-align: center;
+    font-size: 16px;
+    color: #c4c7d0;
+    font-weight: 600;
+}
+
+.trending-image {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.trending-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.trending-info h4 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.trending-info p {
+    color: #667085;
+    font-size: 10px;
+}
+
+.trending-price {
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* FLOATING BASKET */
+
+.basket-bar {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(465px, 92%);
+    min-height: 64px;
+    background: #252b3b;
+    border: 1px solid #454b5b;
+    border-radius: 40px;
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    box-shadow: 0 8px 30px rgba(16, 24, 40, 0.2);
+    z-index: 1000;
+}
+
+.basket-count {
+    width: 36px;
+    height: 36px;
+    background: #7935e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.basket-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.basket-details h4 {
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.basket-details p {
+    font-size: 10px;
+    color: #b7bdcc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.basket-total {
+    font-size: 17px;
+    color: #c8a5ff;
+    white-space: nowrap;
+}
+
+.checkout-btn {
+    background: #7935e9;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 11px 18px;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.checkout-btn:hover {
+    background: #6423cf;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+
+    .food-highlights {
+        grid-template-columns: 1fr;
+        padding: 20px 4%;
+    }
+
+    .combo-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .combo-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2,
+    .trending-heading h2 {
+        font-size: 16px;
+    }
+
+    .combo-info h3 {
+        font-size: 14px;
+    }
+
+    .club-banner {
+        flex-wrap: wrap;
+    }
+
+    .manage-btn {
+        margin-left: auto;
+    }
+
+    .trending-card {
+        padding: 10px;
+    }
+
+    .trending-item {
+        gap: 8px;
+    }
+
+    .trending-info h4 {
+        font-size: 11px;
+    }
+
+    .trending-info p {
+        font-size: 9px;
+    }
+
+    .basket-bar {
+        gap: 7px;
+        padding: 8px;
+    }
+
+    .basket-total {
+        font-size: 13px;
+    }
+
+    .checkout-btn {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #17233e;
+}
+
+/* MAIN LAYOUT */
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* SECTION HEADINGS */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #18243d;
+}
+
+.section-header h2 span {
+    color: #7546ec;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.section-header small {
+    font-size: 10px;
+    color: #7041df;
+    background: #eee8ff;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+/* OFFER CARDS */
+
+.offer-card {
+    background: white;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.food-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.food-item img {
+    width: 90px;
+    height: 75px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.food-details small {
+    color: #7650df;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.food-details h3 {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.food-details p {
+    color: #788197;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.price-row strong {
+    font-size: 16px;
+}
+
+.price-row del {
+    color: #a4a8b5;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.price-row button,
+.checkout-btn {
+    background: #7543e9;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.price-row button:hover,
+.checkout-btn:hover {
+    background: #5c2dca;
+}
+
+/* SAVINGS BANNER */
+
+.savings-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f0edff;
+    padding: 14px;
+    border-radius: 12px;
+    margin-top: 14px;
+}
+
+.savings-icon {
+    background: #e5dcff;
+    color: #7543e9;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.savings-text {
+    flex: 1;
+}
+
+.savings-text strong {
+    font-size: 12px;
+}
+
+.savings-text p {
+    font-size: 10px;
+    color: #778096;
+    margin-top: 4px;
+}
+
+.manage-btn {
+    background: white;
+    border: 1px solid #e5e2f0;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* TRENDING SECTION */
+
+.trending-card {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 4px;
+    border-bottom: 1px solid #f0f1f5;
+}
+
+.trending-item:last-child {
+    border-bottom: none;
+}
+
+.number {
+    color: #a3a9b9;
+    font-size: 14px;
+    width: 15px;
+}
+
+.trending-item img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.trending-details {
+    flex: 1;
+}
+
+.trending-details h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.trending-details p {
+    color: #8a91a3;
+    font-size: 10px;
+}
+
+.trending-item > strong {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* FLOATING BASKET */
+
+.floating-basket {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: #252b3d;
+    color: white;
+    width: 520px;
+    max-width: calc(100% - 30px);
+    padding: 14px 18px;
+    border-radius: 18px;
+    margin: 25px auto -28px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.basket-count {
+    background: #7543e9;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.basket-details {
+    flex: 1;
+}
+
+.basket-details strong {
+    font-size: 12px;
+}
+
+.basket-details p {
+    font-size: 10px;
+    color: #b7bdce;
+    margin-top: 4px;
+}
+
+.basket-price {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.checkout-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #f0f2fb;
+    padding: 45px 25px 20px;
+    border-top: 1px solid #e5e8f2;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.footer-column h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #17233e;
+}
+
+.footer-column p,
+.footer-column a {
+    display: block;
+    color: #59647b;
+    font-size: 12px;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #7543e9;
+}
+
+.footer-bottom {
+    border-top: 1px solid #dfe3ef;
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: #657087;
+}
+
+.footer-location {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .floating-basket {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .basket-details strong {
+        font-size: 10px;
+    }
+
+    .basket-details p {
+        font-size: 9px;
+    }
+
+    .basket-price {
+        font-size: 12px;
+    }
+
+    .checkout-btn {
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .savings-banner {
+        flex-wrap: wrap;
+    }
+
+    .manage-btn {
+        margin-left: auto;
+    }
+
+    .trending-item {
+        gap: 8px;
+    }
+
+    .trending-item img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    background-color: #f0f2ff;
+    padding: 40px 6.4% 25px;
+    border-top: 1px solid #e5e7f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FOOTER COLUMNS */
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 35px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    color: #151b2d;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* FOODDASH LOGO */
+
+.logo {
+    font-size: 21px;
+    font-weight: 700;
+    color: #171b2b;
+    margin-bottom: 10px;
+}
+
+.logo span {
+    color: #7543e9;
+}
+
+/* FOOTER DESCRIPTION */
+
+.brand-column p {
+    color: #59647b;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 290px;
+}
+
+/* FOOTER LINKS */
+
+.footer-column a {
+    text-decoration: none;
+    color: #59647b;
+    font-size: 15px;
+    margin-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #7543e9;
+}
+
+/* BOTTOM SECTION */
+
+.footer-bottom {
+    border-top: 1px solid #dfe3f2;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #59647b;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    color: #17233e;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dot {
+    color: #7543e9;
+    font-size: 18px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 35px 5% 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .footer-info {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+    }
+
+    .footer-column h3 {
+        font-size: 14px;
+    }
+
+    .footer-column a,
+    .brand-column p {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .footer-bottom p,
+    .footer-info {
+        font-size: 11px;
+    }
+}
