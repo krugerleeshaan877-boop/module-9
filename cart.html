@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Cart | FoodDash</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f5fb;
+            color: #171721;
+        }
+
+        header {
+            background: white;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 8px #0000000d;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #171721;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #7c3aed;
+        }
+
+        header a.back-link {
+            color: #5421b8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 35px auto;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        .intro {
+            color: #667085;
+            margin-bottom: 25px;
+        }
+
+        .cart-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 22px;
+            align-items: start;
+        }
+
+        .cart-items,
+        .summary {
+            background: white;
+            border-radius: 15px;
+            padding: 22px;
+            box-shadow: 0 4px 15px #00000008;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 85px minmax(0, 1fr);
+            gap: 15px;
+            padding: 18px 0;
+            border-bottom: 1px solid #eeeeF4;
+        }
+
+        .cart-item:first-child {
+            padding-top: 0;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .food-image {
+            width: 85px;
+            height: 85px;
+            object-fit: cover;
+            border-radius: 12px;
+            background: #f4f5fb;
+        }
+
+        .item-details h3 {
+            margin: 0 0 8px;
+            font-size: 17px;
+            overflow-wrap: anywhere;
+        }
+
+        .item-price {
+            color: #5421b8;
+            font-weight: bold;
+            margin: 0 0 12px;
+        }
+
+        .item-controls {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid #dedee8;
+            border-radius: 8px;
+            padding: 5px 9px;
+        }
+
+        .quantity-controls button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .remove-button {
+            border: none;
+            background: transparent;
+            color: #d92d20;
+            cursor: pointer;
+        }
+
+        .summary h2 {
+            margin-top: 0;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 18px 0;
+        }
+
+        .total-row {
+            font-size: 19px;
+            font-weight: bold;
+            padding-top: 16px;
+            border-top: 1px solid #eeeeF4;
+        }
+
+        .checkout-button,
+        .continue-button {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            border-radius: 9px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .checkout-button {
+            border: none;
+            background: #171721;
+            color: white;
+            margin-top: 18px;
+        }
+
+        .checkout-button:hover {
+            background: #5421b8;
+        }
+
+        .continue-button {
+            margin-top: 10px;
+            color: #5421b8;
+            background: #f1eaff;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 45px 15px;
+        }
+
+        .empty-cart .emoji {
+            font-size: 50px;
+        }
+
+        .empty-cart p {
+            color: #667085;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 700px) {
+            .cart-layout {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 16px 5%;
+            }
+
+            main {
+                width: 92%;
+                margin-top: 25px;
+            }
+
+            .cart-items,
+            .summary {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">Food<span>Dash</span></a>
+    <a href="index.html" class="back-link">← Continue shopping</a>
+</header>
+
+<main>
+    <h1>My food Cart 🛒</h1>
+    <p class="intro">Review your meals and your order total.</p>
+
+    <section id="emptyCart" class="cart-items empty-cart hidden">
+        <div class="emoji">🛒</div>
+        <h2>Your cart is empty</h2>
+        <p>Add some delicious food from the FoodDash homepage.</p>
+        <a href="index.html" class="continue-button">
+            Browse Food
+        </a>
+    </section>
+
+    <div id="cartLayout" class="cart-layout">
+        <section class="cart-items">
+            <h2>Your Items (<span id="itemCount">0</span>)</h2>
+            <div id="cartItems"></div>
+        </section>
+
+        <aside class="summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Items</span>
+                <span id="summaryCount">0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">R0.00</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery fee</span>
+                <span>Calculated at checkout</span>
+            </div>
+
+            <div class="summary-row total-row">
+                <span>Total</span>
+                <span id="total">R0.00</span>
+            </div>
+
+            <button id="checkoutButton" class="checkout-button">
+                Proceed to Checkout
+            </button>
+
+            <a href="index.html" class="continue-button">
+                back to menu
+            </a>
+        </aside>
+    </div>
+</main>
+
+<script>
+    const cartItemsContainer = document.getElementById("cartItems");
+    const cartLayout = document.getElementById("cartLayout");
+    const emptyCart = document.getElementById("emptyCart");
+
+    function getCart() {
+        try {
+            const cart = JSON.parse(
+                localStorage.getItem("foodDashCart") || "[]"
+            );
+
+            return Array.isArray(cart) ? cart : [];
+        } catch (error) {
+            console.error("Could not read cart:", error);
+            return [];
+        }
+    }
+
+    function saveCart(cart) {
+        localStorage.setItem("foodDashCart", JSON.stringify(cart));
+    }
+
+    function money(amount) {
+        return "R" + Number(amount || 0).toFixed(2);
+    }
+
+    function renderCart() {
+        const cart = getCart();
+
+        cartItemsContainer.replaceChildren();
+
+        const totalQuantity = cart.reduce(
+            (sum, item) => sum + Number(item.quantity || 0),
+            0
+        );
+
+        const subtotal = cart.reduce(
+            (sum, item) =>
+                sum +
+                Number(item.price || 0) *
+                Number(item.quantity || 0),
+            0
+        );
+
+        document.getElementById("itemCount").textContent = totalQuantity;
+        document.getElementById("summaryCount").textContent = totalQuantity;
+        document.getElementById("subtotal").textContent = money(subtotal);
+        document.getElementById("total").textContent = money(subtotal);
+
+        if (cart.length === 0) {
+            cartLayout.classList.add("hidden");
+            emptyCart.classList.remove("hidden");
+            return;
+        }
+
+        cartLayout.classList.remove("hidden");
+        emptyCart.classList.add("hidden");
+
+        cart.forEach((item, index) => {
+            const quantity = Math.max(1, Number(item.quantity) || 1);
+            const price = Number(item.price) || 0;
+
+            const row = document.createElement("article");
+            row.className = "cart-item";
+
+            const image = document.createElement("img");
+            image.className = "food-image";
+            image.src = item.image || "images/logo.png";
+            image.alt = item.mealName || "Food item";
+
+            image.onerror = () => {
+                image.onerror = null;
+                image.src = "images/logo.png";
+            };
+
+            const details = document.createElement("div");
+            details.className = "item-details";
+
+            const name = document.createElement("h3");
+            name.textContent = item.mealName || "Food item";
+
+            const priceText = document.createElement("p");
+            priceText.className = "item-price";
+            priceText.textContent = money(price) + " each";
+
+            const controls = document.createElement("div");
+            controls.className = "item-controls";
+
+            const quantityControls = document.createElement("div");
+            quantityControls.className = "quantity-controls";
+
+            const minus = document.createElement("button");
+            minus.type = "button";
+            minus.textContent = "−";
+            minus.setAttribute("aria-label", "Decrease quantity");
+
+            const quantityText = document.createElement("span");
+            quantityText.textContent = quantity;
+
+            const plus = document.createElement("button");
+            plus.type = "button";
+            plus.textContent = "+";
+            plus.setAttribute("aria-label", "Increase quantity");
+
+            const itemSubtotal = document.createElement("strong");
+            itemSubtotal.textContent = money(price * quantity);
+
+            minus.addEventListener("click", () => {
+                const updatedCart = getCart();
+
+                if (updatedCart[index].quantity > 1) {
+                    updatedCart[index].quantity -= 1;
+                } else {
+                    updatedCart.splice(index, 1);
+                }
+
+                saveCart(updatedCart);
+                renderCart();
+            });
+
+            plus.addEventListener("click", () => {
+                const updatedCart = getCart();
+                updatedCart[index].quantity =
+                    Number(updatedCart[index].quantity || 1) + 1;
+
+                saveCart(updatedCart);
+                renderCart();
+            });
+
+            const remove = document.createElement("button");
+            remove.type = "button";
+            remove.className = "remove-button";
+            remove.textContent = "Remove";
+
+            remove.addEventListener("click", () => {
+                const updatedCart = getCart();
+                updatedCart.splice(index, 1);
+                saveCart(updatedCart);
+                renderCart();
+            });
+
+            quantityControls.append(minus, quantityText, plus);
+            controls.append(quantityControls, itemSubtotal, remove);
+            details.append(name, priceText, controls);
+            row.append(image, details);
+
+            cartItemsContainer.appendChild(row);
+        });
+    }
+
+    document.getElementById("checkoutButton").addEventListener("click", () => {
+        const cart = getCart();
+
+        if (cart.length === 0) {
+            alert("Your cart is empty. Please add some food first.");
+            return;
+        }
+
+        // Connect this button to your checkout page when it is ready.
+        window.location.href = "checkout.html";
+    });
+
+    // Display saved cart items when the page opens
+    renderCart();
+</script>
+
+</body>
+</html>

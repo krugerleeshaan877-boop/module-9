@@ -1,14 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FoodDash - Home</title>
+
     <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/f61b06e391.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f61b06e391.js"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-<!-- NAVIGATION BAR -->
+
+    <!-- NAVIGATION BAR -->
     <header class="navbar">
 
         <div class="brand">
@@ -29,7 +35,7 @@
 
         <div class="nav-right">
             <button class="cart-button">🛒 R0.00</button>
-            <a href="login.html" class="profile">👤 Thabang</a>
+           <a href="register.html" class="profile">👤 Register / Login</a>
         </div>
 
     </header>
@@ -41,11 +47,13 @@
         <!-- WELCOME SECTION -->
         <section class="welcome">
 
-            <span class="greeting">🟢 DELIVERING TO SANDTON CENTRAL</span>
+            <span class="greeting">
+                🟢 DELIVERING TO SANDTON CENTRAL
+            </span>
 
             <h1>Good morning, Thabang 👋</h1>
 
-            <p>What are you craving today? </p>
+            <p>What are you craving today?</p>
 
         </section>
 
@@ -55,7 +63,9 @@
 
             <div class="hero-text">
 
-                <span class="badge">SPECIAL COLLECTION · SOUTH AFRICAN FLAVOURS</span>
+                <span class="badge">
+                    SPECIAL COLLECTION · SOUTH AFRICAN FLAVOURS
+                </span>
 
                 <h2>
                     South African<br>
@@ -79,304 +89,198 @@
 
             <div class="hero-image">
                 <img
-                    src="/images/ChatGPT Image Sep 29, 2026, 03_02_16 PM.png">
+                    src="images/ChatGPT Image Sep 29, 2026, 03_02_16 PM.png"
+                    alt="South African food collection">
             </div>
 
         </section>
 
+
+        <!-- EXPLORE CATEGORIES -->
         <section class="explore-section">
 
-        <!-- Heading -->
-        <div class="section-header">
-            <h2>Explore Categories</h2>
+            <div class="section-header">
+                <h2>Explore Categories</h2>
 
-            <div class="navigation">
-                <button><i class="fa-solid fa-chevron-left"></i></button>
-                <button><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-        </div>
+                <div class="navigation">
+                    <button type="button" aria-label="Previous categories">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
 
-        <!-- Categories -->
-        <div class="categories">
-
-            <div class="category active">
-                <div class="category-icon">🍔</div>
-                <p>Burgers</p>
+                    <button type="button" aria-label="Next categories">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
 
-            <div class="category">
-                <div class="category-icon">🍕</div>
-                <p>Pizza</p>
-            </div>
 
-            <div class="category">
-                <div class="category-icon">🍗</div>
-                <p>Chicken Curry</p>
-            </div>
-
-            <div class="category">
-                <div class="category-icon">🍤</div>
-                <p>Seafood</p>
-            </div>
-
-            <div class="category">
-                <div class="category-icon">🥗</div>
-                <p>Salads</p>
-            </div>
-
-            <div class="category">
-                <div class="category-icon">🍩</div>
-                <p>Desserts</p>
-            </div>
-
-            <div class="category">
-                <div class="category-icon">🍻</div>
-                <p>Refreshments</p>
-            </div>
-
-            <div class="category">
-                <div class="category-icon">🥩</div>
-                <p>Braai</p>
-            </div>
-
-        </div>
-
-        <!-- Filters -->
-        <div class="filter-section">
-
-            <div class="filters">
-
-                <button class="filter-btn all-filters">
-                    <i class="fa-solid fa-sliders"></i>
-                    All Filters (3)
-                </button>
-
-                <button class="filter-btn rating">
-                    <i class="fa-solid fa-star"></i>
-                    Rating 4.5+
-                    <span>×</span>
-                </button>
-
-                <button class="filter-btn">
-                    Free Delivery
-                </button>
-
-                <button class="filter-btn">
-                    <i class="fa-regular fa-clock"></i>
-                    Under 30 mins
-                </button>
-
-                <button class="filter-btn">
-                    <i class="fa-solid fa-fire"></i>
-                    Offers
-                </button>
-
-                <button class="filter-btn">
-                    Price: R
-                </button>
-
-                <button class="filter-btn">
-                    Dietary: Halaal, Vegan
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-
-            </div>
-
-            <p class="nearby">Showing 12 kitchens nearby</p>
-
-        </div>
-        <div class="popular-header">
-            <div>
-                <h2>Popular Near You</h2>
-                <p>Top-rated spots with fast dispatch and fresh reviews.</p>
-            </div>
-            
-            <div class="header-navigation">
-                <span>See all </span>
-                <button><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-        </div>
-
-    </section>
-    <section class="restaurants-cards">
-        <div class="card">
-            <img src="/images/burger-shake.jpg"/>
-            
-            <span class="card-info">
-                <h3>The Burger House</h3>
-                <span class="card-rating">
-                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
-                    4.8 (420+)
-                </span>
-            </span>
-            <span class="delivery-details">
-                <span class="delivery-time">
-                    <span><i class="fa-solid fa-motorcycle" style="color: rgb(177, 151, 252);"></i></span>
-                    <span>R 15</span>
-                </span>
-                <span class="delivery-location">
-                    <span>Cape Town</span>
-                </span>
-            </span>
-                
-        </div>
-        <div class="card">
-            <img src="/images/pizza.png"/>
-            
-            <span class="card-info">
-                <h3>Pizza Perfect</h3>
-                <span class="card-rating">
-                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
-                    4.9 (420+)
-                </span>
-            </span>
-            <span class="delivery-details">
-                <span class="delivery-time">
-                    <span><i class="fa-solid fa-motorcycle" style="color: rgb(177, 151, 252);"></i></span>
-                    <span>R 12</span>
-                </span>
-                <span class="delivery-location">
-                    <span>Cape Town</span>
-                </span>
-            </span>
-                
-        </div>
-        <div class="card">
-            <img src="/images/chicken-curry.png"/>
-            
-            <span class="card-info">
-                <h3>The Curry Cartel</h3>
-                <span class="card-rating">
-                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
-                    4.8 (420+)
-                </span>
-            </span>
-            <span class="delivery-details">
-                <span class="delivery-time">
-                    <span><i class="fa-solid fa-motorcycle" style="color: rgb(177, 151, 252);"></i></span>
-                    <span>R 20</span>
-                </span>
-                <span class="delivery-location">
-                    <span>Cape Town</span>
-                </span>
-            </span>
-                
-        </div>
-        <div class="card">
-            <img src="/images/seafood.png"/>
-            
-            <span class="card-info">
-                <h3>On the Hook</h3>
-                <span class="card-rating">
-                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
-                    5.00 (420+)
-                </span>
-            </span>
-            <span class="delivery-details">
-                <span class="delivery-time">
-                    <span><i class="fa-solid fa-motorcycle" style="color: rgb(177, 151, 252);"></i></span>
-                    <span>R 15</span>
-                </span>
-                <span class="delivery-location">
-                    <span>Cape Town</span>
-                </span>
-            </span>
-                
-        </div>
-        <div class="card">
-            <img src="/images/salads.png"/>
-            
-            <span class="card-info">
-                <h3>The daily leaf</h3>
-                <span class="card-rating">
-                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
-                    4.8 (420+)
-                </span>
-            </span>
-            <span class="delivery-details">
-                <span class="delivery-time">
-                    <span><i class="fa-solid fa-motorcycle" style="color: rgb(177, 151, 252);"></i></span>
-                    <span>R 15</span>
-                </span>
-                <span class="delivery-location">
-                    <span>Cape Town</span>
-                </span>
-            </span>
-                
-        </div>
-    </section>
-
-    <div class="popular-header">
-        <div>              
-            <h2><i class="fa-solid fa-tag" style="color: rgb(177, 151, 252);"></i>Curated Value Combos</h2>
-        </div>
+            <!-- FOOD CATEGORIES -->
         
-        <div class="header-navigation">
-            <span>Save up to 35%</span>
-        </div>
+<!-- FOOD CATEGORIES -->
+<div class="categories" id="foodCategories">
+
+    <div class="category active" data-category="all" role="button" tabindex="0">
+        <div class="category-icon">🍽️</div>
+        <p>All Food</p>
     </div>
-    <section class="offers-section">
+
+    <div class="category" data-category="burgers" role="button" tabindex="0">
+        <div class="category-icon">🍔</div>
+        <p>Burgers</p>
+    </div>
+
+    <div class="category" data-category="pizza" role="button" tabindex="0">
+        <div class="category-icon">🍕</div>
+        <p>Pizza</p>
+    </div>
+
+    <div class="category" data-category="chicken curry" role="button" tabindex="0">
+        <div class="category-icon">🍗</div>
+        <p>Chicken Curry</p>
+    </div>
+
+    <div class="category" data-category="seafood" role="button" tabindex="0">
+        <div class="category-icon">🍤</div>
+        <p>Seafood</p>
+    </div>
+
+    <div class="category" data-category="salads" role="button" tabindex="0">
+        <div class="category-icon">🥗</div>
+        <p>Salads</p>
+    </div>
+
+    <div class="category" data-category="desserts" role="button" tabindex="0">
+        <div class="category-icon">🍩</div>
+        <p>Desserts</p>
+    </div>
+
+    <div class="category" data-category="refreshments" role="button" tabindex="0">
+        <div class="category-icon">🥤</div>
+        <p>Refreshments</p>
+    </div>
+
+    <div class="category" data-category="braai" role="button" tabindex="0">
+        <div class="category-icon">🥩</div>
+        <p>Braai</p>
+    </div>
+
+</div>
+
+
+
+            <!-- FILTERS -->
+            <div class="filter-section">
+
+                <div class="filters">
+
+                    <button type="button" class="filter-btn all-filters">
+                        <i class="fa-solid fa-sliders"></i>
+                        All Filters (3)
+                    </button>
+
+                    <button type="button" class="filter-btn rating">
+                        <i class="fa-solid fa-star"></i>
+                        Rating 4.5+
+                        <span>×</span>
+                    </button>
+
+                    <button type="button" class="filter-btn">
+                        Free Delivery
+                    </button>
+
+                    <button type="button" class="filter-btn">
+                        <i class="fa-regular fa-clock"></i>
+                        Under 30 mins
+                    </button>
+
+                    <button type="button" class="filter-btn">
+                        <i class="fa-solid fa-fire"></i>
+                        Offers
+                    </button>
+
+                    <button type="button" class="filter-btn">
+                        Price: R
+                    </button>
+
+                    <button type="button" class="filter-btn">
+                        Dietary: Halaal, Vegan
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                </div>
+
+                <p class="nearby">Showing available products nearby</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DYNAMIC PRODUCTS SECTION -->
+        <section class="products-section">
+
+            <div class="popular-header">
+                <div>
+                    <h2>Popular Near You</h2>
+                    <p>Explore meals available for delivery.</p>
+                </div>
+
+                <div class="header-navigation">
+                    <span>See all</span>
+                    <button type="button" aria-label="See all products">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- JavaScript inserts product cards here -->
+            <div class="restaurants-cards" id="products-container">
+
+                <p>Loading products...</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CURATED VALUE COMBOS -->
+        <section class="offers-section">
 
             <div class="section-header">
-                <h2><span>local_offer</span> Curated Value Combos</h2>
+                <h2>
+                    <i class="fa-solid fa-tag"></i>
+                    Curated Value Combos
+                </h2>
+
                 <small>SAVE UP TO 35%</small>
             </div>
 
-            <div class="offer-card">
+            <!-- Offer cards can be added dynamically later -->
+            <div id="offers-container">
 
-                <div class="food-item">
-                    <img src="/images/seafood-combo.webp"
-                            alt="seafood-combo">
-
-                    <div class="food-details">
-                        <small>On the Hook</small>
-                        <h3>The Big Hook special</h3>
-                        <p>Any seafood platter/spice rice with a 2 ltre sprite.</p>
-                    </div>
-                </div>
-
-                <div class="price-row">
-                    <div>
-                        <strong>R180.00</strong>
-                        <del>R270.00</del>
-                    </div>
-                    <button>Add</button>
-                </div>
-
-            </div>
-
-            <div class="offer-card">
-
-                <div class="food-item">
-                    <img src="/images/pizza-combo.webp"
-                         alt="pizza-combo">
-                    <div class="food-details">
-                        <small>BEST DEAL</small>
-                        <h3>Pizza Perfect</h3>
-                        <p>Any 2 Medium Pizzas, with a mocktail of your choice.</p>
-                    </div>
-                </div>
-
-                <div class="price-row">
-                    <div>
-                        <strong>R245.00</strong>
-                        <del>R320.00</del>
-                    </div>
-                    <button>Add</button>
-                </div>
+                <p>Special offers will appear here.</p>
 
             </div>
 
             <!-- SAVINGS BANNER -->
             <div class="savings-banner">
+
                 <div class="savings-icon">%</div>
 
                 <div class="savings-text">
-                    <strong>You've saved R142.50 this month with FoodDash Club</strong>
-                    <p>Limited free deliveries on every order over R100.</p>
+                    <strong>
+                        Save more with FoodDash Club
+                    </strong>
+
+                    <p>
+                        Enjoy special deals and delivery perks on eligible orders.
+                    </p>
                 </div>
 
-                <button class="manage-btn">Manage Perks</button>
+                <button type="button" class="manage-btn">
+                    Manage Perks
+                </button>
+
             </div>
 
         </section>
@@ -386,198 +290,107 @@
         <section class="trending-section">
 
             <div class="section-header">
-                <h2><span>whatshot</span> Trending in Cape Town</h2>
-                <small>Live updates</small>
+                <h2>
+                    <i class="fa-solid fa-fire"></i>
+                    Trending Meals
+                </h2>
+
+                <small>Discover popular products</small>
             </div>
 
-            <div class="trending-card">
+            <!-- Trending products can be added dynamically later -->
+            <div class="trending-card" id="trending-container">
 
-                <div class="trending-item">
-                    <span class="number">1</span>
-
-                    <img src="/images/flying dutchmen.webp"
-                         alt="flying-dutchmen">
-                    <div class="trending-details">
-                        <h3>Flying dutchmen with loaded fries</h3>
-                        <p> Burger House · 140+ ordered today</p>
-                    </div>
-
-                    <strong>R215.00</strong>
-                </div>
-
-                <div class="trending-item">
-                    <span class="number">2</span>
-
-                    <img src="/images/desserts.webp"
-                         alt="desserts">
-                    <div class="trending-details">
-                        <h3>Treatopia desserts</h3>
-                        <p>desserts lower than R300 · 96% rated today</p>
-                    </div>
-
-
-                    <strong>R120.00</strong>
-
-                    
-                </div>
-
-                <div class="trending-item">
-                    <span class="number">3</span>
-
-                    <img src="images/braai-combo.webp"
-                              alt="braai-combo">
-                    <div class="trending-details">
-                        <h3>The smoke & stone lounge</h3>
-                        <p>Where the smoke meets the vibe & GOOD MEAT · 82 ordered today</p>
-                    </div>
-
-                    <strong>R65.00</strong>
-                </div>
+                <p>Trending products will appear here.</p>
 
             </div>
 
         </section>
 
-        
-<!-- FOOTER SECTION -->
-<footer class="footer">
+    </main>
 
-    <div class="footer-container">
 
-        <!-- BRAND -->
-        <div class="footer-column brand-column">
-            <h2 class="logo">Food<span>Dash</span></h2>
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- BRAND -->
+            <div class="footer-column brand-column">
+
+                <h2 class="logo">
+                    Food<span>Dash</span>
+                </h2>
+
+                <p>
+                    The fastest, freshest gourmet food delivery
+                    web experience across South Africa.
+                </p>
+
+            </div>
+
+
+            <!-- DISCOVER -->
+            <div class="footer-column">
+
+                <h3>Discover</h3>
+
+                <a href="#">Top Restaurants</a>
+                <a href="#">Deals &amp; Promotions</a>
+                <a href="#">Groceries &amp; Pantry</a>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+            <div class="footer-column">
+
+                <h3>Account</h3>
+
+                <a href="#">Order History</a>
+                <a href="#">Saved Dishes</a>
+                <a href="#">Shopping Bag</a>
+
+            </div>
+
+
+            <!-- LEGAL AND HELP -->
+            <div class="footer-column">
+
+                <h3>Legal &amp; Help</h3>
+
+                <a href="#">Support Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
 
             <p>
-                The fastest, freshest gourmet food delivery
-                web experience across South Africa.
+                © 2026 FoodDash Technologies. All rights reserved.
             </p>
+
+            <div class="footer-info">
+                <span>South Africa</span>
+                <span class="dot">•</span>
+                <span>Fast Urban Courier Fleet</span>
+            </div>
+
         </div>
 
-        <!-- DISCOVER -->
-        <div class="footer-column">
-            <h3>Discover</h3>
-            <a href="#">Top Restaurants</a>
-            <a href="#">Deals & Promotions</a>
-            <a href="#">Groceries & Pantry</a>
-        </div>
+    </footer>
 
-        <!-- ACCOUNT -->
-        <div class="footer-column">
-            <h3>Account</h3>
-            <a href="#">Order History</a>
-            <a href="#">Saved Dishes</a>
-            <a href="#">Shopping Bag</a>
-        </div>
 
-        <!-- LEGAL & HELP -->
-        <div class="footer-column">
-            <h3>Legal & Help</h3>
-            <a href="#">Support Center</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </div>
-
-    </div>
-
-    <!-- FOOTER BOTTOM -->
-    <div class="footer-bottom">
-
-        <p>© 2025 FoodDash Technologies Inc. All rights reserved.</p>
-
-        <div class="footer-info">
-            <span>Sandton, Johannesburg</span>
-            <span class="dot">•</span>
-            <span>Fast Urban Courier Fleet</span>
-        </div>
-
-    </div>
-
-</footer>
-
-    
-
-        
+    <!-- JAVASCRIPT MODULE -->
+    <script
+        type="module"
+        src="./auth/javascript/home.js">
+    </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

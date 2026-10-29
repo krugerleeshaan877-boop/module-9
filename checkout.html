@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FoodDash - Checkout</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <span class="food">Food</span><span class="dash">Dash</span>
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="menu.html" class="active">Your Order</a>
+      </nav>
+    </header>
+
+    <main class="checkout-container">
+      <div class="page-heading">
+        <h1>Checkout</h1>
+        <p>You're one step away from enjoying your meal!</p>
+      </div>
+
+      <div class="checkout-layout">
+        <!-- Delivery and payment form -->
+        <section class="checkout-form">
+          <form id="checkoutForm">
+            <div class="form-section">
+              <h2><i class="fa-solid fa-location-dot"></i> Delivery Details</h2>
+
+              <label for="fullName">Full Name</label>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your full name"
+                required
+              />
+
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+                pattern="[0-9+\s()-]{10,15}"
+                required
+              />
+
+              <label for="address">Delivery Address</label>
+              <textarea
+                id="address"
+                rows="3"
+                placeholder="Street, house number and suburb"
+                required
+              ></textarea>
+
+              <label for="city">City / Town</label>
+              <input
+                type="text"
+                id="city"
+                placeholder="Enter your city or town"
+                required
+              />
+
+              <label for="instructions">Delivery Instructions (Optional)</label>
+              <textarea
+                id="instructions"
+                rows="2"
+                placeholder="e.g. Call when you arrive"
+              ></textarea>
+            </div>
+
+            <div class="form-section">
+              <h2><i class="fa-solid fa-credit-card"></i> Payment Method</h2>
+
+              <label class="payment-option">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="Cash on Delivery"
+                  required
+                />
+                <span
+                  ><i class="fa-solid fa-money-bill-wave"></i> Cash on
+                  Delivery</span
+                >
+              </label>
+            </div>
+
+            <button type="submit" class="place-order-btn">
+              Place Order <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p class="secure-note">
+              <i class="fa-solid fa-lock"></i>
+              Please check your delivery details before placing your order.
+            </p>
+          </form>
+        </section>
+
+        <!-- Order summary -->
+        <aside class="order-summary">
+          <h2>Your Order</h2>
+
+          <div id="checkoutItems" class="checkout-items">
+            <p>Loading your order...</p>
+          </div>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">R0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Delivery Fee</span>
+            <span id="deliveryFee">R15.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Service Fee</span>
+            <span id="serviceFee">R5.00</span>
+          </div>
+
+          <div class="summary-total">
+            <span>Total</span>
+            <span id="total">R0.00</span>
+          </div>
+
+          <a href="menu.html" class="back-to-menu">
+            <i class="fa-solid fa-arrow-left"></i> Back to Menu
+          </a>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 FoodDash South Africa. All rights reserved.</p>
+    </footer>
+
+    <script src="menu.html"></script>
+  </body>
+</html>
+```

@@ -560,3 +560,211 @@ LOGIN FORM
 .footer-links a:hover {
     text-decoration: underline;
 }
+
+
+/* Make all elements calculate their sizes consistently */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Main page */
+.page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Desktop layout */
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 90vh;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Left promotional section */
+.promo-section {
+    flex: 1.2;
+    min-width: 0;
+    padding: 40px;
+}
+
+/* Right login section */
+.login-section {
+    flex: 0.8;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.promo-content,
+.login-content {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* Make images responsive */
+.food-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.food-card {
+    flex: 1 1 180px;
+    min-width: 0;
+}
+
+.food-card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Form fields */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.login-content button,
+.google-login {
+    max-width: 100%;
+}
+
+.login-content button {
+    cursor: pointer;
+}
+
+/* Tablet screens */
+@media (max-width: 900px) {
+    .page {
+        padding: 12px;
+    }
+
+    .login-container {
+        min-height: auto;
+    }
+
+    .promo-section,
+    .login-section {
+        padding: 25px;
+    }
+
+    .promo-section h1 {
+        font-size: clamp(26px, 4vw, 38px);
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 650px) {
+    .page {
+        padding: 0;
+    }
+
+    .login-container {
+        flex-direction: column;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+
+    .promo-section,
+    .login-section {
+        flex: none;
+        width: 100%;
+        padding: 24px 18px;
+    }
+
+    .promo-section h1 {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .promo-description {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .food-cards {
+        flex-direction: column;
+    }
+
+    .food-card {
+        width: 100%;
+    }
+
+    .food-card img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .feature {
+        flex: 1 1 90px;
+        min-width: 0;
+    }
+
+    .right-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .right-buttons button {
+        flex: 1;
+        min-width: 0;
+        padding: 12px 8px;
+    }
+
+    .right-info h1 {
+        font-size: 26px;
+    }
+
+    .form-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .remember-me {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .google-login {
+        width: 100%;
+        padding: 14px;
+    }
+}

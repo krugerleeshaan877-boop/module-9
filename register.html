@@ -1,27 +1,157 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Set the character encoding so text displays correctly -->
     <meta charset="UTF-8">
+
+    <!-- Make the page adjust to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodDash - Register</title>
+
+    <!-- Set the title displayed in the browser tab -->
+    <title>FoodDash | Create Account</title>
+
+    <!-- Link the registration page to its CSS styling file -->
+    <!-- Register CSS -->
+    <link rel="stylesheet" href="register.css">
+
+    <!-- Load Font Awesome to provide icons for the website -->
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/f61b06e391.js"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <section class="register-section">
-        <div class="register-container">
-            <h1>Register</h1>
-            <form action="register.php" method="POST">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+    <!-- MAIN REGISTER CONTAINER -->
+    <!-- Hold the branding section and registration form together -->
+    <div class="register-container">
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+        <!-- LEFT SIDE: BRANDING -->
+        <!-- Display the FoodDash brand and the benefits of creating an account -->
+        <div class="register-left">
 
-                <button type="submit">Register</button>
-            </form>
+            <!-- Display the FoodDash logo and brand name -->
+            <div class="brand">
+                <img src="images/logo.png" alt="FoodDash Logo">
+                <span>Food<span class="purple">Dash</span></span>
+            </div>
+
+            <!-- Display the main welcome heading -->
+            <h1>Good food starts here!</h1>
+
+            <!-- Explain what customers can expect from FoodDash -->
+            <p>
+                Create your FoodDash account and discover delicious meals
+                delivered fresh to your door.
+            </p>
+
+            <!-- List the benefits of creating a FoodDash account -->
+            <ul class="register-benefits">
+                <li>Order your favourite meals</li>
+                <li>Track your deliveries in real time</li>
+                <li>Enjoy exclusive food deals</li>
+                <li>Save your favourite dishes</li>
+            </ul>
+
         </div>
-    </section>
+
+
+        <!-- RIGHT SIDE: REGISTER FORM -->
+        <!-- Display the registration form where users enter their details -->
+        <div class="register-right">
+
+            <!-- Display the registration heading -->
+            <h2>Create Account</h2>
+
+            <!-- Give users instructions for completing the registration form -->
+            <p class="register-subtitle">
+                Join FoodDash today. Enter your details below to get started.
+            </p>
+
+            <!-- REGISTER FORM -->
+            <!-- Group the registration fields and button into one form -->
+            
+<form class="register-form" id="registerForm">
+
+    <!-- USERNAME -->
+    <!-- Collect the username chosen by the user -->
+    <div class="form-group">
+        <label for="UserName">Username</label>
+        <input
+            type="text"
+            id="UserName"
+            name="UserName"
+            placeholder="Enter your username"
+            required>
+    </div>
+
+    <!-- EMAIL -->
+    <!-- Collect the user's email address -->
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required>
+    </div>
+
+    <!-- PASSWORD -->
+    <!-- Allow the user to create a password for their account -->
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            minlength="6"
+            required>
+    </div>
+
+    <!-- TERMS AND CONDITIONS -->
+    <!-- Require the user to agree to the terms before submitting the form -->
+    <label class="terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <span>
+            I agree to the
+            <a href="#">Terms and Conditions</a>.
+        </span>
+    </label>
+
+    <!-- MESSAGE -->
+    <!-- Provide a space for registration status or error messages -->
+    <p id="registerMessage" role="status" aria-live="polite"></p>
+
+    <!-- CREATE ACCOUNT BUTTON -->
+    <!-- Submit the registration form when the button is clicked -->
+    <button type="submit" class="register-button" id="signUp">
+        Create Account
+    </button>
+
+</form>
+
+
+
+            <!-- LOGIN LINK -->
+            <!-- Allow existing users to navigate to the login page -->
+            <p class="login-link">
+                Already have an account?
+                <a href="login.html">Log in</a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- REGISTER JAVASCRIPT -->
+    <!-- Load the JavaScript module that handles registration functionality -->
+    <script type="module" src="register.js"></script>
+
 </body>
+
 </html>
