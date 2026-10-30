@@ -1,396 +1,157 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Set the character encoding so text displays correctly -->
     <meta charset="UTF-8">
+
+    <!-- Make the page adjust to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FoodDash - Home</title>
+    <!-- Set the title displayed in the browser tab -->
+    <title>FoodDash | Create Account</title>
 
-    <link rel="stylesheet" href="index.css">
+    <!-- Link the registration page to its CSS styling file -->
+    <!-- Register CSS -->
+    <link rel="stylesheet" href="register.css">
+
+    <!-- Load Font Awesome to provide icons for the website -->
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/f61b06e391.js"
         crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <!-- NAVIGATION BAR -->
-    <header class="navbar">
+    <!-- MAIN REGISTER CONTAINER -->
+    <!-- Hold the branding section and registration form together -->
+    <div class="register-container">
 
-        <div class="brand">
-            <img src="images/logo.png" alt="FoodDash Logo" class="logo">
-            <span>Food</span><span class="purple">Dash</span>
-        </div>
+        <!-- LEFT SIDE: BRANDING -->
+        <!-- Display the FoodDash brand and the benefits of creating an account -->
+        <div class="register-left">
 
-        <div class="location">
-            SOUTH AFRICA
-        </div>
-
-        <nav class="nav-links">
-            <a href="index.html" class="active">Explore</a>
-            <a href="#">Offers</a>
-            <a href="#">Orders</a>
-            <a href="#">Favourites</a>
-        </nav>
-
-        <div class="nav-right">
-            <button class="cart-button">🛒 R0.00</button>
-           <a href="register.html" class="profile">👤 Register / Login</a>
-        </div>
-
-    </header>
-
-
-    <!-- MAIN CONTENT -->
-    <main class="container">
-
-        <!-- WELCOME SECTION -->
-        <section class="welcome">
-
-            <span class="greeting">
-                🟢 DELIVERING TO SANDTON CENTRAL
-            </span>
-
-            <h1>Good morning, Thabang 👋</h1>
-
-            <p>What are you craving today?</p>
-
-        </section>
-
-
-        <!-- PROMOTIONAL BANNER -->
-        <section class="hero">
-
-            <div class="hero-text">
-
-                <span class="badge">
-                    SPECIAL COLLECTION · SOUTH AFRICAN FLAVOURS
-                </span>
-
-                <h2>
-                    South African<br>
-                    Taste Week 🔥
-                </h2>
-
-                <p>
-                    Celebrate legendary local flavours, from Kota burgers
-                    to Durban-style curries. Discover authentic South
-                    African favourites delivered fresh to your door.
-                </p>
-
-                <div class="hero-buttons">
-                    <span>🔥 LIMITED TIME</span>
-                    <span>UP TO 30% OFF</span>
-                </div>
-
-                <button class="hero-button">Claim Deal →</button>
-
+            <!-- Display the FoodDash logo and brand name -->
+            <div class="brand">
+                <img src="images/logo.png" alt="FoodDash Logo">
+                <span>Food<span class="purple">Dash</span></span>
             </div>
 
-            <div class="hero-image">
-                <img
-                    src="images/ChatGPT Image Sep 29, 2026, 03_02_16 PM.png"
-                    alt="South African food collection">
-            </div>
+            <!-- Display the main welcome heading -->
+            <h1>Good food starts here!</h1>
 
-        </section>
-
-
-        <!-- EXPLORE CATEGORIES -->
-        <section class="explore-section">
-
-            <div class="section-header">
-                <h2>Explore Categories</h2>
-
-                <div class="navigation">
-                    <button type="button" aria-label="Previous categories">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-
-                    <button type="button" aria-label="Next categories">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-
-
-            <!-- FOOD CATEGORIES -->
-        
-<!-- FOOD CATEGORIES -->
-<div class="categories" id="foodCategories">
-
-    <div class="category active" data-category="all" role="button" tabindex="0">
-        <div class="category-icon">🍽️</div>
-        <p>All Food</p>
-    </div>
-
-    <div class="category" data-category="burgers" role="button" tabindex="0">
-        <div class="category-icon">🍔</div>
-        <p>Burgers</p>
-    </div>
-
-    <div class="category" data-category="pizza" role="button" tabindex="0">
-        <div class="category-icon">🍕</div>
-        <p>Pizza</p>
-    </div>
-
-    <div class="category" data-category="chicken curry" role="button" tabindex="0">
-        <div class="category-icon">🍗</div>
-        <p>Chicken Curry</p>
-    </div>
-
-    <div class="category" data-category="seafood" role="button" tabindex="0">
-        <div class="category-icon">🍤</div>
-        <p>Seafood</p>
-    </div>
-
-    <div class="category" data-category="salads" role="button" tabindex="0">
-        <div class="category-icon">🥗</div>
-        <p>Salads</p>
-    </div>
-
-    <div class="category" data-category="desserts" role="button" tabindex="0">
-        <div class="category-icon">🍩</div>
-        <p>Desserts</p>
-    </div>
-
-    <div class="category" data-category="refreshments" role="button" tabindex="0">
-        <div class="category-icon">🥤</div>
-        <p>Refreshments</p>
-    </div>
-
-    <div class="category" data-category="braai" role="button" tabindex="0">
-        <div class="category-icon">🥩</div>
-        <p>Braai</p>
-    </div>
-
-</div>
-
-
-
-            <!-- FILTERS -->
-            <div class="filter-section">
-
-                <div class="filters">
-
-                    <button type="button" class="filter-btn all-filters">
-                        <i class="fa-solid fa-sliders"></i>
-                        All Filters (3)
-                    </button>
-
-                    <button type="button" class="filter-btn rating">
-                        <i class="fa-solid fa-star"></i>
-                        Rating 4.5+
-                        <span>×</span>
-                    </button>
-
-                    <button type="button" class="filter-btn">
-                        Free Delivery
-                    </button>
-
-                    <button type="button" class="filter-btn">
-                        <i class="fa-regular fa-clock"></i>
-                        Under 30 mins
-                    </button>
-
-                    <button type="button" class="filter-btn">
-                        <i class="fa-solid fa-fire"></i>
-                        Offers
-                    </button>
-
-                    <button type="button" class="filter-btn">
-                        Price: R
-                    </button>
-
-                    <button type="button" class="filter-btn">
-                        Dietary: Halaal, Vegan
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-
-                </div>
-
-                <p class="nearby">Showing available products nearby</p>
-
-            </div>
-
-        </section>
-
-
-        <!-- DYNAMIC PRODUCTS SECTION -->
-        <section class="products-section">
-
-            <div class="popular-header">
-                <div>
-                    <h2>Popular Near You</h2>
-                    <p>Explore meals available for delivery.</p>
-                </div>
-
-                <div class="header-navigation">
-                    <span>See all</span>
-                    <button type="button" aria-label="See all products">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- JavaScript inserts product cards here -->
-            <div class="restaurants-cards" id="products-container">
-
-                <p>Loading products...</p>
-
-            </div>
-
-        </section>
-
-
-        <!-- CURATED VALUE COMBOS -->
-        <section class="offers-section">
-
-            <div class="section-header">
-                <h2>
-                    <i class="fa-solid fa-tag"></i>
-                    Curated Value Combos
-                </h2>
-
-                <small>SAVE UP TO 35%</small>
-            </div>
-
-            <!-- Offer cards can be added dynamically later -->
-            <div id="offers-container">
-
-                <p>Special offers will appear here.</p>
-
-            </div>
-
-            <!-- SAVINGS BANNER -->
-            <div class="savings-banner">
-
-                <div class="savings-icon">%</div>
-
-                <div class="savings-text">
-                    <strong>
-                        Save more with FoodDash Club
-                    </strong>
-
-                    <p>
-                        Enjoy special deals and delivery perks on eligible orders.
-                    </p>
-                </div>
-
-                <button type="button" class="manage-btn">
-                    Manage Perks
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- TRENDING SECTION -->
-        <section class="trending-section">
-
-            <div class="section-header">
-                <h2>
-                    <i class="fa-solid fa-fire"></i>
-                    Trending Meals
-                </h2>
-
-                <small>Discover popular products</small>
-            </div>
-
-            <!-- Trending products can be added dynamically later -->
-            <div class="trending-card" id="trending-container">
-
-                <p>Trending products will appear here.</p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="footer-container">
-
-            <!-- BRAND -->
-            <div class="footer-column brand-column">
-
-                <h2 class="logo">
-                    Food<span>Dash</span>
-                </h2>
-
-                <p>
-                    The fastest, freshest gourmet food delivery
-                    web experience across South Africa.
-                </p>
-
-            </div>
-
-
-            <!-- DISCOVER -->
-            <div class="footer-column">
-
-                <h3>Discover</h3>
-
-                <a href="#">Top Restaurants</a>
-                <a href="#">Deals &amp; Promotions</a>
-                <a href="#">Groceries &amp; Pantry</a>
-
-            </div>
-
-
-            <!-- ACCOUNT -->
-            <div class="footer-column">
-
-                <h3>Account</h3>
-
-                <a href="#">Order History</a>
-                <a href="#">Saved Dishes</a>
-                <a href="#">Shopping Bag</a>
-
-            </div>
-
-
-            <!-- LEGAL AND HELP -->
-            <div class="footer-column">
-
-                <h3>Legal &amp; Help</h3>
-
-                <a href="#">Support Center</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-
-            </div>
-
-        </div>
-
-
-        <!-- FOOTER BOTTOM -->
-        <div class="footer-bottom">
-
+            <!-- Explain what customers can expect from FoodDash -->
             <p>
-                © 2026 FoodDash Technologies. All rights reserved.
+                Create your FoodDash account and discover delicious meals
+                delivered fresh to your door.
             </p>
 
-            <div class="footer-info">
-                <span>South Africa</span>
-                <span class="dot">•</span>
-                <span>Fast Urban Courier Fleet</span>
-            </div>
+            <!-- List the benefits of creating a FoodDash account -->
+            <ul class="register-benefits">
+                <li>Order your favourite meals</li>
+                <li>Track your deliveries in real time</li>
+                <li>Enjoy exclusive food deals</li>
+                <li>Save your favourite dishes</li>
+            </ul>
 
         </div>
 
-    </footer>
+
+        <!-- RIGHT SIDE: REGISTER FORM -->
+        <!-- Display the registration form where users enter their details -->
+        <div class="register-right">
+
+            <!-- Display the registration heading -->
+            <h2>Create Account</h2>
+
+            <!-- Give users instructions for completing the registration form -->
+            <p class="register-subtitle">
+                Join FoodDash today. Enter your details below to get started.
+            </p>
+
+            <!-- REGISTER FORM -->
+            <!-- Group the registration fields and button into one form -->
+            
+<form class="register-form" id="registerForm">
+
+    <!-- USERNAME -->
+    <!-- Collect the username chosen by the user -->
+    <div class="form-group">
+        <label for="UserName">Username</label>
+        <input
+            type="text"
+            id="UserName"
+            name="UserName"
+            placeholder="Enter your username"
+            required>
+    </div>
+
+    <!-- EMAIL -->
+    <!-- Collect the user's email address -->
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required>
+    </div>
+
+    <!-- PASSWORD -->
+    <!-- Allow the user to create a password for their account -->
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            minlength="6"
+            required>
+    </div>
+
+    <!-- TERMS AND CONDITIONS -->
+    <!-- Require the user to agree to the terms before submitting the form -->
+    <label class="terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <span>
+            I agree to the
+            <a href="#">Terms and Conditions</a>.
+        </span>
+    </label>
+
+    <!-- MESSAGE -->
+    <!-- Provide a space for registration status or error messages -->
+    <p id="registerMessage" role="status" aria-live="polite"></p>
+
+    <!-- CREATE ACCOUNT BUTTON -->
+    <!-- Submit the registration form when the button is clicked -->
+    <button type="submit" class="register-button" id="signUp">
+        Create Account
+    </button>
+
+</form>
 
 
-    <!-- JAVASCRIPT MODULE -->
-    <script
-        type="module"
-        src="./auth/javascript/home.js">
-    </script>
+
+            <!-- LOGIN LINK -->
+            <!-- Allow existing users to navigate to the login page -->
+            <p class="login-link">
+                Already have an account?
+                <a href="login.html">Log in</a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- REGISTER JAVASCRIPT -->
+    <!-- Load the JavaScript module that handles registration functionality -->
+    <script type="module" src="register.js"></script>
 
 </body>
+
 </html>
